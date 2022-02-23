@@ -4,30 +4,31 @@ const app = express()
 
 app.use(express.json())
 const courses = [
-    {id: 1, name:'course1'},
-    {id: 2, name:'course2'}
+    { id: 1, name: 'course1' },
+    { id: 2, name: 'course2' }
 ]
 
-app.get('/', (req, res)=>{
+app.get('/', (req, res) => {
     res.send("hello world !")
 })
 
-app.get('/api/courses', (req, res)=>{
+app.get('/api/courses', (req, res) => {
     res.send(courses)
 })
 
-app.get('/api/courses/:id', (req, res)=>{
-    const course = courses.find((c)=>c.id === parseInt(req.params.id))
-    if(!course)
-        res.status(404).send('course not found')
+app.get('/api/courses/:id', (req, res) => {
+    const course = courses.find((c) => c.id === parseInt(req.params.id))
+    if (!course) {
+        return res.status(404).send('course not found')
+    }
     res.send(course)
 })
 
-app.post('/api/courses',(req, res)=>{
+app.post('/api/courses', (req, res) => {
 
-    const {error} = validateCourse(req.body) 
+    const { error } = validateCourse(req.body)
 
-    if(error){
+    if (error) {
         res.status(400).send(result.error.details[0].message)
         return
     }
@@ -36,25 +37,24 @@ app.post('/api/courses',(req, res)=>{
     //     res.status(400).send('name is required and should be minimum 3 chars')
     // }
     const course = {
-        id: courses.length+1, 
+        id: courses.length + 1,
         name: req.body.name
     }
     courses.push(course);
     res.send(courses)
 })
 
-app.put('/api/courses/:id', (req, res)=>{
-    const course =  courses.find(c=>c.id===parseInt(req.params.id))
+app.put('/api/courses/:id', (req, res) => {
+    const course = courses.find(c => c.id === parseInt(req.params.id))
 
-    if(!course){
-        res.status(404).send('course not found')
+    if (!course) {
+        return res.status(404).send('course not found')
     }
 
-    const {error} = validateCourse(req.body) 
+    const { error } = validateCourse(req.body)
 
-    if(error){
-        res.status(400).send(result.error.details[0].message)
-        return
+    if (error) {
+        return res.status(400).send(result.error.details[0].message)
     }
     course.name = req.body.name
     // const newCourse = {id : course.id, name: req.body.name}
@@ -65,10 +65,22 @@ app.put('/api/courses/:id', (req, res)=>{
 
 })
 
-function validateCourse(course){
-    const schema = {name: Joi.string().min(3).required()}
+app.delete('/api/courses/:id', (req, res) => {
+    const course = courses.find(c => c.id === parseInt(req.params.id))
+    if (!course) {
+        return res.status(404).send('course not found')
+    }
+
+    const index = courses.indexOf(course)
+    courses.splice(index, 1)
+
+    res.send(courses)
+})
+
+function validateCourse(course) {
+    const schema = { name: Joi.string().min(3).required() }
     return Joi.validate(course, schema)
 }
 
 const port = process.env.PORT || 3000
-app.listen(port, ()=> console.log(`listening on ${port} ....`))
+app.listen(port, () => console.log(`listening on ${port} ....`))
