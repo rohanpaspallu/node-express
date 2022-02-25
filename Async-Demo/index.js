@@ -1,11 +1,15 @@
 console.log('before')
 
-getUser(1, (user)=>{
+getUser(1, displayUsers)
+
+function displayRepositories(val){
+    console.log(val)
+}
+
+function displayUsers(user){
     console.log('user:', user)
-    getRepositories(user.gitHubUsername, (val)=>{
-        console.log(val)
-    })
-})
+    getRepositories(user.gitHubUsername, displayRepositories)
+}
 
 
 
