@@ -1,0 +1,6 @@
+{
+    "name": "Rohan's dev environment",
+    "mail": {
+        "host": "dev-mail-server"
+    }
+}

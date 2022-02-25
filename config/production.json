@@ -1,0 +1,6 @@
+{
+    "name": "Rohan's prod environment",
+    "mail": {
+        "host": "prod-mail-server"
+    }
+}
