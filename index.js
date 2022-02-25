@@ -1,3 +1,5 @@
+const startupDebugger = require('debug')('app:startup')
+const dbDebugger = require('debug')('app:db')
 const config = require('config')
 const helmet = require('helmet')
 const morgan = require('morgan')
@@ -16,11 +18,12 @@ app.use(helmet())
 
 //configuration
 console.log('Application name:'+ config.get("name"))
-// console.log('Mail password:'+ config.get("mail.password"))
+console.log('Mail password:'+ config.get("mail.password"))
 
 if (app.get('env') === 'development') {
     app.use(morgan('tiny'))
     console.log('morgan enabled')
+    startupDebugger('morgan enabled')
 }
 
 
