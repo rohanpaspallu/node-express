@@ -2,11 +2,12 @@ console.log('before')
 
 getUser(1, (user)=>{
     console.log('user:', user)
+    getRepositories(user.gitHubUsername, (val)=>{
+        console.log(val)
+    })
 })
 
-getRepositories('rohan', (val)=>{
-    console.log(val)
-})
+
 
 // console.log(user)
 console.log('after')
@@ -20,6 +21,7 @@ function getUser(id, callback) {
 
 function getRepositories(username, callback){
     setTimeout(()=>{
+        console.log("calling from github api")
         callback(['repo1', 'repo2', 'repo3'])
     },2000)
     
