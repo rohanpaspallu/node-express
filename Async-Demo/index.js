@@ -20,6 +20,18 @@ getUser(1)
     .catch(err=>console.log(err.message))
 
 
+
+/*===================================ASYNC AWAIT==============================*/
+async function displayCommits(){
+    const user = await getUser(1)
+    const repo = await getRepositories(user.gitHubUsername)
+    
+    console.log(repo)
+}
+
+displayCommits()
+
+
 // console.log(user)
 console.log('after')
 
