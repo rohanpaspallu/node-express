@@ -28,4 +28,17 @@ async function getCourses(){
     console.log(courses)
 }
 
+async function updateCourse(id){
+    const course = await Course.findById(id)
+    console.log(course)
+    if(!course) return
+
+    course.isPublished = true
+    course.author = 'Rohan'
+
+    const result = await course.save()
+    console.log(result)
+}
+
+// updateCourse('5a68fdf95db93f6477053ddd')
 getCourses()
