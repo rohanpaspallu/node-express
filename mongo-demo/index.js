@@ -67,7 +67,7 @@ async function updateCourse(id){
     const course = await Course.findByIdAndUpdate(id,{
         $set:{
             author: 'Rohan',
-            isPublished: false
+            isPublished: true
         }
     },{new: true})
     console.log(course)
