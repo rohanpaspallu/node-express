@@ -39,16 +39,39 @@ async function getCourses(){
     console.log(courses)
 
 }
+//--------------------------------------Update Method 1-----------------------------------------------------------
+// async function updateCourse(id){
+//     const course = await Course.findById(id)
+//     if(!course)return
 
+//     course.isPublished = true
+//     course.author = 'Nisarg'
+
+//     const result = await course.save()
+//     console.log(result)
+// }
+
+//--------------------------------------Update Method 2-----------------------------------------------------------
+// async function updateCourse(id){
+//     const result = await Course.update({_id: id},{
+//         $set:{
+//             author: 'Mosh',
+//             isPublished: false
+//         }
+//     })
+//     console.log(result)
+// }
+
+//--------------------------------------Update Method 3-----------------------------------------------------------
 async function updateCourse(id){
-    const course = await Course.findById(id)
-    if(!course)return
-
-    course.isPublished = true
-    course.author = 'Nisarg'
-
-    const result = await course.save()
-    console.log(result)
+    const course = await Course.findByIdAndUpdate(id,{
+        $set:{
+            author: 'Rohan',
+            isPublished: false
+        }
+    },{new: true})
+    console.log(course)
 }
+
 
 updateCourse('62631e4b97283ffff454d078')
