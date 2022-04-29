@@ -5,7 +5,7 @@ mongoose.connect('mongodb://localhost/playground')
     .catch(err=> console.log(`couldn't connect to mongo DB.... ${err}`))
 
 const courseSchema = new mongoose.Schema({
-    name: String,
+    name: {type: String, required: true},
     author: String,
     tags: [String],
     date: {type: Date, default: Date.now},
@@ -14,20 +14,45 @@ const courseSchema = new mongoose.Schema({
 
 const Course = mongoose.model('Course', courseSchema)
 
-// async function createCourse(){
-//     const course = new Course({
-//         name: 'Node course',
-//         author: 'rohan paspallu',
-//         tags: ['node','frontend'],
-//         isPublished: true
-//     })
-    
-//     const result = await course.save()
-    
-//     console.log(result)
-// }
+async function createCourse(){
+    const course = new Course({
+        name: 'Node course',
+        author: 'rohan deepak paspallu',
+        tags: ['node','frontend'],
+        isPublished: true
+    })
 
-// createCourse()
+
+    //---------------------------------------first method------------------------------------------------
+
+    try{
+        const result = await course.save()
+        console.log(result)
+    }
+    catch (ex){
+        console.log(ex.message)
+    }
+    
+    //---------------------------------------second method------------------------------------------------
+    //buggy code, not recommended
+    
+    // try{
+    //     const isValid = await course.validate(err=>{
+    //         if(err){
+    //             console.log(err.message)
+    //         }
+    //     })
+    // }
+    // catch (ex){
+    //     console.log(ex.message)
+    // }
+
+    
+
+    
+}
+
+createCourse()
 
 async function getCourses(){
     const courses = await Course
@@ -79,4 +104,4 @@ async function removeCourse(id){
 }
 
 
-removeCourse('62631e4b97283ffff454d078')
+// removeCourse('62631e4b97283ffff454d078')
