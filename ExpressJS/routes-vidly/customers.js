@@ -5,9 +5,19 @@ const Joi = require('joi')
 const boolean = require('joi/lib/types/boolean')
 
 const customersSchema = new mongoose.Schema({
-    isGold: Boolean,
-    name: String,
-    phone: String
+    isGold: {type: Boolean, default: false},
+    name: {
+        type: String,
+        required: true,
+        minlength: 5,
+        maxlength: 50
+    },
+    phone: {
+        type: String,
+        required: true,
+        minlength: 5,
+        maxlength: 50
+    }
 })
 
 const Customer = mongoose.model('Customer', customersSchema)
