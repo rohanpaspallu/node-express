@@ -3,25 +3,7 @@ const mongoose = require('mongoose')
 const router = express.Router()
 const Joi = require('joi')
 const boolean = require('joi/lib/types/boolean')
-
-const customersSchema = new mongoose.Schema({
-    isGold: {type: Boolean, default: false},
-    name: {
-        type: String,
-        required: true,
-        minlength: 5,
-        maxlength: 50
-    },
-    phone: {
-        type: String,
-        required: true,
-        minlength: 5,
-        maxlength: 50
-    }
-})
-
-const Customer = mongoose.model('Customer', customersSchema)
-
+const {Customer, validate} = require('../models/customers')
 //----------------------------------GET ALL ELEMENTS FROM THE DATABASE------------------------------------------------------------
 router.get('/', async (req, res)=>{
     const customers = await Customer.find().sort({name:1})
@@ -41,7 +23,7 @@ router.get('/:id', async (req, res)=>{
 //----------------------------------POST A PARTICULAR ELEMENT TO THE DATABASE------------------------------------------------------------
 router.post('/', async (req, res)=>{
 
-    const {error} = validateCustomer(req.body)
+    const {error} = validate(req.body)
 
     if(error) return res.status(400).send(error.details[0].message)
 
@@ -58,7 +40,7 @@ router.post('/', async (req, res)=>{
 //----------------------------------UPDATE A PARTICULAR ELEMENT IN THE DATABASE------------------------------------------------------------
 router.put('/:id', async (req, res)=>{
 
-    const {error} = validateCustomer(req.body)
+    const {error} = validate(req.body)
 
     if(error) return res.status(400).send(error.details[0].message) 
 
@@ -80,14 +62,5 @@ router.delete('/:id', async (req, res)=>{
 
     res.send(customer)
 })
-
-function validateCustomer(customer) {
-    const schema = { 
-        isGold: Joi.boolean().required(),
-        name: Joi.string().min(3).required(),
-        phone: Joi.string().min(10).required() 
-    }
-    return Joi.validate(customer, schema)
-}
 
 module.exports = router
