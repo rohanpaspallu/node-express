@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const router = express.Router()
 const Joi = require('joi')
-
+const {Genre, validate} = require('../models/genres')
 
 
 
@@ -22,7 +22,7 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
     // res.send(req.body.name)
-    const {error} = validateGenre(req.body)
+    const {error} = validate(req.body)
 
     if(error) return res.status(400).send(error.details[0].message)
 
@@ -36,7 +36,7 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
 
-    const {error} = validateGenre(req.body)
+    const {error} = validate(req.body)
 
     if(error) return res.status(400).send(error.details[0].message) 
 

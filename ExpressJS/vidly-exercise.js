@@ -4,6 +4,7 @@ const express = require('express')
 const app = express()
 const genres = require('./routes-vidly/genres')
 const customers = require('./routes-vidly/customers')
+const movies = require('./routes-vidly/movies')
 
 mongoose.connect('mongodb://localhost/vidly')
     .then(()=>console.log("connected to mongodb"))
@@ -11,7 +12,7 @@ mongoose.connect('mongodb://localhost/vidly')
 
 app.use(express.json())
 app.use('/api/customers', customers)
-
+app.use('/api/movies',movies)
 
 app.use('/api/genres', genres)
 
