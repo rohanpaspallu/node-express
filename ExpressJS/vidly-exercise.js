@@ -7,6 +7,7 @@ const customers = require('./routes-vidly/customers')
 const movies = require('./routes-vidly/movies')
 const rental = require('./routes-vidly/rental')
 const users = require('./routes-vidly/users')
+const auth = require('./routes-vidly/auth')
 
 mongoose.connect('mongodb://localhost/vidly')
     .then(()=>console.log("connected to mongodb"))
@@ -18,6 +19,7 @@ app.use('/api/movies',movies)
 app.use('/api/users', users)
 app.use('/api/genres', genres)
 app.use('/api/rental', rental)
+app.use('/api/auth', auth)
 
 app.use('/',(req, res)=>{
     res.send("welcome to vidly")
