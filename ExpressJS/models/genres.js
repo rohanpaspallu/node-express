@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Joi = require('joi')
 
-const genresSchema = new mongoose.Schema({
+const genreSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -10,7 +10,7 @@ const genresSchema = new mongoose.Schema({
     }
 })
 
-const Genre = mongoose.model('Genre', genresSchema)
+const Genre = mongoose.model('Genre', genreSchema)
 
 function validateGenre(genre) {
     const schema = { name: Joi.string().min(3).required() }
