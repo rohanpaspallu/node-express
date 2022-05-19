@@ -9,6 +9,7 @@ const movies = require('./routes-vidly/movies')
 const rental = require('./routes-vidly/rental')
 const users = require('./routes-vidly/users')
 const auth = require('./routes-vidly/auth')
+const error = require('./middleware/error')
 
 if(!config.get('jwtPrivateKey')){
     console.log("FATAL ERROR: JWT private key not defined")
@@ -26,6 +27,7 @@ app.use('/api/users', users)
 app.use('/api/genres', genres)
 app.use('/api/rental', rental)
 app.use('/api/auth', auth)
+app.use(error)
 
 app.use('/',(req, res)=>{
     res.send("welcome to vidly")
