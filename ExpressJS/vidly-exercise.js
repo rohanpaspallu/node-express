@@ -1,4 +1,5 @@
 require('express-async-errors')
+const winston = require('winston')
 const config = require('config')
 const Joi = require('joi')
 const mongoose = require('mongoose')
@@ -11,6 +12,8 @@ const rental = require('./routes-vidly/rental')
 const users = require('./routes-vidly/users')
 const auth = require('./routes-vidly/auth')
 const error = require('./middleware/error')
+
+winston.add(winston.transports.File, {filename: 'logfiles.log'})
 
 if(!config.get('jwtPrivateKey')){
     console.log("FATAL ERROR: JWT private key not defined")
