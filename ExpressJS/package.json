@@ -34,7 +34,8 @@
     "npm-check-updates": "^12.3.1",
     "pug": "^3.0.2",
     "underscore": "^1.13.2",
-    "winston": "^2.4.0"
+    "winston": "^2.4.0",
+    "winston-mongodb": "^3.0.0"
   },
   "devDependencies": {
     "jshint": "^2.13.4"
