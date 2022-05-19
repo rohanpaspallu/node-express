@@ -4,6 +4,7 @@ const router = express.Router()
 const Joi = require('joi')
 const {Genre, validate} = require('../models/genres')
 const auth = require('../middleware/auth')
+const admin = require('../middleware/admin')
 
 
 
@@ -51,7 +52,7 @@ router.put('/:id', async (req, res) => {
 
 })
 
-router.delete('/:id', async(req, res) => {
+router.delete('/:id',[auth, admin], async(req, res) => {
 
     const genre = await Genre.findByIdAndRemove(req.params.id)
 
