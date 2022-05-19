@@ -15,14 +15,24 @@ const auth = require('./routes-vidly/auth')
 const error = require('./middleware/error')
 
 process.on('uncaughtException', ex =>{
-    console.log("we got uncaught exception")
+    // console.log("we got uncaught exception")
     winston.error(ex.message, ex)
+    process.exit(1)
+})
+
+process.on('unhandledRejection', ex =>{
+    // console.log("we got unhandled rejection")
+    winston.error(ex.message, ex)
+    process.exit(1)
 })
 
 winston.add(winston.transports.File, {filename: 'logfiles.log'})
 winston.add(winston.transports.MongoDB, { db: 'mongodb://localhost/vidly'})
 
-throw new Error("something went wrong")
+// throw new Error("something went wrong")
+
+const p = Promise.reject(new Error("Something failed miserably !"))
+p.then(()=>console.log("done"))
 
 if(!config.get('jwtPrivateKey')){
     console.log("FATAL ERROR: JWT private key not defined")
