@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const router = express.Router()
 const Joi = require('joi')
 const {Genre, validate} = require('../models/genres')
+const auth = require('../middleware/auth')
 
 
 
@@ -20,7 +21,7 @@ router.get('/:id', async (req, res) => {
 
 })
 
-router.post('/', async (req, res) => {
+router.post('/',auth, async (req, res) => {
     // res.send(req.body.name)
     const {error} = validate(req.body)
 
