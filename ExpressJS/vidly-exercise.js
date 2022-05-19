@@ -14,16 +14,21 @@ const users = require('./routes-vidly/users')
 const auth = require('./routes-vidly/auth')
 const error = require('./middleware/error')
 
-process.on('uncaughtException', ex =>{
-    // console.log("we got uncaught exception")
-    winston.error(ex.message, ex)
-    process.exit(1)
-})
+// process.on('uncaughtException', ex =>{
+//     // console.log("we got uncaught exception")
+//     winston.error(ex.message, ex)
+//     process.exit(1)
+// })
+
+winston.handleExceptions(
+    new winston.transports.File({filename: 'uncaughtExceptions.log'})
+)
 
 process.on('unhandledRejection', ex =>{
     // console.log("we got unhandled rejection")
-    winston.error(ex.message, ex)
-    process.exit(1)
+    // winston.error(ex.message, ex)
+    // process.exit(1)
+    throw ex
 })
 
 winston.add(winston.transports.File, {filename: 'logfiles.log'})
