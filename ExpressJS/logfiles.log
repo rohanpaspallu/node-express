@@ -3,3 +3,23 @@
 {"message":"something went wrong","stack":"Error: something went wrong\n    at Object.<anonymous> (C:\\Users\\RohanDeepakPaspallu\\Desktop\\git\\node-express\\ExpressJS\\vidly-exercise.js:25:7)\n    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n    at Module.load (internal/modules/cjs/loader.js:928:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)\n    at internal/main/run_main_module.js:17:47","level":"error","timestamp":"2022-05-19T21:56:26.572Z"}
 {"message":"something went wrong","stack":"Error: something went wrong\n    at Object.<anonymous> (C:\\Users\\RohanDeepakPaspallu\\Desktop\\git\\node-express\\ExpressJS\\vidly-exercise.js:25:7)\n    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n    at Module.load (internal/modules/cjs/loader.js:928:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)\n    at internal/main/run_main_module.js:17:47","level":"error","timestamp":"2022-05-19T21:56:34.183Z"}
 {"message":"Something failed miserably !","stack":"Error: Something failed miserably !\n    at Object.<anonymous> (C:\\Users\\RohanDeepakPaspallu\\Desktop\\git\\node-express\\ExpressJS\\vidly-exercise.js:32:26)\n    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n    at Module.load (internal/modules/cjs/loader.js:928:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)\n    at internal/main/run_main_module.js:17:47","level":"error","timestamp":"2022-05-19T23:46:06.955Z"}
+{"level":"info","message":"connected to mongodb","timestamp":"2022-05-20T00:10:54.550Z"}
+{"level":"info","message":"connected to mongodb","timestamp":"2022-05-20T00:11:28.523Z"}
+{"level":"info","message":"connected to mongodb","timestamp":"2022-05-20T00:12:44.069Z"}
+{"level":"info","message":"connected to mongodb","timestamp":"2022-05-20T00:13:32.115Z"}
+{"level":"info","message":"connected to mongodb","timestamp":"2022-05-20T00:13:50.832Z"}
+{"level":"info","message":"connected to mongodb","timestamp":"2022-05-20T00:14:31.895Z"}
+{"level":"info","message":"connected to mongodb","timestamp":"2022-05-20T00:16:28.813Z"}
+{"level":"info","message":"connected to mongodb","timestamp":"2022-05-20T00:16:43.058Z"}
+{"level":"info","message":"connected to mongodb","timestamp":"2022-05-20T00:17:40.823Z"}
+{"level":"info","message":"connected to mongodb","timestamp":"2022-05-20T00:20:57.313Z"}
+{"level":"info","message":"connected to mongodb","timestamp":"2022-05-20T00:21:07.843Z"}
+{"level":"info","message":"connected to mongodb","timestamp":"2022-05-20T00:21:13.634Z"}
+{"level":"info","message":"connected to mongodb","timestamp":"2022-05-20T00:21:33.480Z"}
+{"level":"info","message":"connected to mongodb","timestamp":"2022-05-20T00:21:54.934Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-20T00:22:32.133Z"}
+{"level":"info","message":"connected to mongodb","timestamp":"2022-05-20T00:22:32.173Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-20T00:24:47.222Z"}
+{"level":"info","message":"connected to mongodb","timestamp":"2022-05-20T00:24:47.257Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-20T00:24:57.783Z"}
+{"level":"info","message":"connected to mongodb","timestamp":"2022-05-20T00:24:57.866Z"}
