@@ -1,6 +1,6 @@
 require('express-async-errors')
 const winston = require('winston')
-require('winston-mongodb')
+// require('winston-mongodb')
 
 module.exports = function(){
     // process.on('uncaughtException', ex =>{
@@ -22,7 +22,7 @@ module.exports = function(){
     })
 
     winston.add(winston.transports.File, {filename: 'logfiles.log'})
-    winston.add(winston.transports.MongoDB, { db: 'mongodb://localhost/vidly'})
+    // winston.add(winston.transports.MongoDB, { db: 'mongodb://localhost/vidly', level:'info'})
 
     // throw new Error("something went wrong")
 
