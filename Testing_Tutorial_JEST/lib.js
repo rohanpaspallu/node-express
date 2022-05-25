@@ -11,7 +11,7 @@ module.exports.absolute = function(number) {
 
 // Testing strings 
 module.exports.greet = function(name) { 
-  return 'Welcome ' + name; 
+  return 'Welcome ' + name +'!'; 
 }
 
 // Testing arrays 
@@ -28,7 +28,7 @@ module.exports.getProduct = function(productId) {
 module.exports.registerUser = function(username) { 
   if (!username) throw new Error('Username is required.');
 
-  return { id: new Date().getTime(), username: username }
+  return { id: new Date().getTime(), username: 'rohan' }
 }
 
 // Mock functions 
