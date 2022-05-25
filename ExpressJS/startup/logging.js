@@ -22,7 +22,7 @@ module.exports = function(){
     })
 
     winston.add(winston.transports.File, {filename: 'logfiles.log'})
-    // winston.add(winston.transports.MongoDB, { db: 'mongodb://localhost/vidly', level:'info'})
+    winston.add(winston.transports.MongoDB, { db: 'mongodb://localhost/vidly', level:'info'})
 
     // throw new Error("something went wrong")
 
