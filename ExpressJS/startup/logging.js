@@ -1,6 +1,6 @@
 require('express-async-errors')
 const winston = require('winston')
-// require('winston-mongodb')
+require('winston-mongodb')
 
 module.exports = function(){
     // process.on('uncaughtException', ex =>{
@@ -26,6 +26,6 @@ module.exports = function(){
 
     // throw new Error("something went wrong")
 
-    const p = Promise.reject(new Error("Something failed miserably !"))
-    p.then(()=>console.log("done"))
+    // const p = Promise.reject(new Error("Something failed miserably !"))
+    // p.then(()=>console.log("done"))
 }

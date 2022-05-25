@@ -21,6 +21,7 @@ require('./startup/routes')(app)
 require('./startup/db')()
 require('./startup/config')()
 require('./startup/validation')()
+require('./startup/logging')()
 
 app.use('/',(req, res)=>{
     res.send("welcome to vidly")
@@ -29,4 +30,4 @@ app.use('/',(req, res)=>{
 
 
 const port = process.env.PORT || 3002
-app.listen(port, () => console.log(`listening on ${port} ....`))
+app.listen(port, () => winston.info(`listening on ${port} ....`))
