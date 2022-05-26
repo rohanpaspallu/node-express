@@ -30,4 +30,6 @@ app.use('/',(req, res)=>{
 
 
 const port = process.env.PORT || 3002
-app.listen(port, () => winston.info(`listening on ${port} ....`))
+const server = app.listen(port, () => winston.info(`listening on ${port} ....`))
+
+module.exports = server
