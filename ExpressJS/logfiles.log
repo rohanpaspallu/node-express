@@ -284,3 +284,9 @@
 {"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T16:58:40.519Z"}
 {"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T17:00:49.749Z"}
 {"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T17:00:49.824Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T17:24:04.319Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T17:24:04.401Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T17:25:52.739Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T17:25:52.821Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T17:31:48.687Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T17:31:48.751Z"}
