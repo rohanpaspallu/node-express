@@ -456,3 +456,59 @@
 {"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:37:36.194Z"}
 {"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:37:36.241Z"}
 {"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:37:36.295Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:39:02.569Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:39:02.641Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:39:02.695Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:39:02.801Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:39:26.235Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:39:26.301Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:39:26.289Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:39:26.383Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:41:06.057Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:41:06.093Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:41:06.130Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:41:06.188Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:42:41.905Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:42:41.908Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:42:41.982Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:42:41.995Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:44:13.125Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:44:13.160Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:44:13.218Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:44:13.280Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:45:36.359Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:45:36.369Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:45:36.459Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:45:36.869Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:45:56.895Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:45:57.001Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:45:57.357Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:45:57.487Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:46:08.673Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:46:08.752Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:46:08.796Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:46:08.898Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:46:14.819Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:46:14.967Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:46:15.091Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:46:15.186Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:47:00.763Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:47:00.716Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:47:00.809Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:47:00.863Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:47:00.903Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:47:00.964Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:47:00.980Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:47:01.083Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:48:56.588Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:48:56.888Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:48:56.864Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:48:57.026Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:49:49.135Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:49:49.123Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:49:49.208Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:49:49.262Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:52:56.369Z"}
+{"level":"info","message":"listening on 3002 ....","timestamp":"2022-05-26T18:52:56.345Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:52:56.432Z"}
+{"level":"info","message":"connected to mongodb://localhost/vidly","timestamp":"2022-05-26T18:52:56.450Z"}
