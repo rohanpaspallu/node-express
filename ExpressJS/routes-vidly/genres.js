@@ -5,6 +5,7 @@ const Joi = require('joi')
 const {Genre, validate} = require('../models/genres')
 const auth = require('../middleware/auth')
 const admin = require('../middleware/admin')
+const validateObjectId = require('../middleware/validateObjectId')
 
 
 
@@ -14,11 +15,10 @@ router.get('/',async (req, res) => {
     res.send(genres)
 })
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', validateObjectId ,async (req, res) => {
 
-    if(!mongoose.Types.ObjectId.isValid(req.params.id))
-        return res.status(404).send('Invalid id')
-        
+    
+
     const genre = await Genre.findById(req.params.id)
     
     if (!genre) return res.status(404).send("genre not found")
