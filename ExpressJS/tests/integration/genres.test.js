@@ -24,7 +24,6 @@ describe('/api/genres', ()=>{
             ])
             const res = await request(server).get('/api/genres')
             expect(res.status).toBe(200)
-            console.log(res.body)
             expect(res.body.length).toBe(6)
             expect(res.body.some(g=>g.name === 'genre1')).toBeTruthy()
             
